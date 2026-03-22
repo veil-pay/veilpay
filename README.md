@@ -1,11 +1,11 @@
-# 🎭 VeilPay: The GhostFluid Privacy Protocol
+# 🎭 VeilPay: The Core Privacy Protocol
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-cyan.svg)](https://opensource.org/licenses/MIT)
 [![Network: BSC](https://img.shields.io/badge/Network-Binance%20Smart%20Chain-F3BA2F.svg)](https://bscscan.com/)
 [![Website: veil-pay.com](https://img.shields.io/badge/Website-veil--pay.com-blue?style=flat&logo=google-chrome)](https://veil-pay.com)
 [![X: @veilpay__](https://img.shields.io/badge/Twitter-%40veilpay__-black?logo=x&logoColor=white)](https://x.com/veilpay__)
 
-> **Absolute Privacy for Decentralized Finance.** VeilPay is entirely built on the **Binance Smart Chain (BSC)** using the advanced `GhostFluidPrivacyPool` zero-knowledge architecture. Execute your P2P transfers and acquire high-volatility tokens completely off the public radar.
+> **Absolute Privacy for Decentralized Finance.** VeilPay is entirely built on the **Binance Smart Chain (BSC)** using the advanced `VeilPayPrivacyPool` zero-knowledge architecture. Execute your P2P transfers and acquire high-volatility tokens completely off the public radar.
 
 ---
 
@@ -23,7 +23,7 @@ By utilizing an automated Relayer circuit and a mathematical `nullifierHash`, Ve
 
 ### 1. Private Pay Integration
 Private Pay powers unlinked, anonymous peer-to-peer transfers over BSC. Use this module when paying contractors, sending massive gifts, or hiding your operational treasury movements.
-- **Deposit**: Frontend native hooks securely write `deposit(bytes32 _commitment)` parsing your precise transaction value into the GhostFluid Immutable Vault.
+- **Deposit**: Frontend native hooks securely write `deposit(bytes32 _commitment)` parsing your precise transaction value into the VeilPay Immutable Vault.
 - **Relay**: A mathematically isolated `nullifierHash` is secretly routed to our off-chain node.
 - **Execute**: VeilPay’s Relayer broadcasts `withdraw()`, directing the native BNB directly into the final recipient wallet whilst entirely abstracting gas fees.
 

@@ -30,7 +30,7 @@ export default function DocsPage() {
                         <span className="inline-block font-mono text-xs uppercase tracking-wider text-cyan-400 border border-cyan-400/30 rounded-full px-3 py-1 bg-cyan-400/10 mb-2">Version 1.0</span>
                         <h1 className="text-5xl font-bold tracking-tight text-foreground">VeilPay Documentation</h1>
                         <p className="text-xl text-muted-foreground leading-relaxed">
-                            Welcome to the official VeilPay technical manual. This guide provides comprehensive instructions on interacting with our <strong>GhostFluidPrivacyPool</strong> architecture, a zero-knowledge escrow foundation explicitly built on the Binance Smart Chain (BSC). 
+                            Welcome to the official VeilPay technical manual. This guide provides comprehensive instructions on interacting with our <strong>VeilPayPrivacyPool</strong> architecture, a zero-knowledge escrow foundation explicitly built on the Binance Smart Chain (BSC). 
                         </p>
                     </section>
 
@@ -52,7 +52,7 @@ export default function DocsPage() {
                             Private Pay powers unlinked peer-to-peer transfers. Use this module when paying contractors, sending gifts, or hiding your operational treasury. 
                         </p>
                         <ul className="list-decimal list-inside space-y-4 text-muted-foreground ml-4">
-                            <li><strong>Step 1:</strong> The frontend native hooks `deposit(bytes32 _commitment)` parsing your precise required transaction value directly into the GhostFluid pool.</li>
+                            <li><strong>Step 1:</strong> The frontend native hooks `deposit(bytes32 _commitment)` parsing your precise required transaction value directly into the VeilPay pool.</li>
                             <li><strong>Step 2:</strong> A mathematical `nullifierHash` is secretly routed to the node.</li>
                             <li><strong>Step 3:</strong> VeilPay's Relayer broadcasts `withdraw(...)` directing the stored native BNB directly into your final recipient wallet. Gas fees are abstracted.</li>
                         </ul>

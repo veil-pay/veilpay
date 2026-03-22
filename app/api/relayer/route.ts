@@ -7,8 +7,8 @@ import { bsc } from 'viem/chains';
 const VAULT_CA = process.env.VAULT_CA || '0xA07c59e730DD21791a90743d9AE0C9DdD2772Da0';
 const RELAYER_PK = process.env.RELAYER_PRIVATE_KEY;
 
-// Exact GhostFluidPrivacyPool ABI mapped from user payload
-const ghostFluidAbi = [
+// Exact VeilPayPrivacyPool ABI mapped from user payload
+const veilPayAbi = [
     {
         "inputs": [
             {"name": "_nullifierHash", "type": "bytes32"},
@@ -84,12 +84,12 @@ export async function POST(request: Request) {
         if (action === 'private_pay') {
             const { recipient, amount, asset } = payload;
             
-            // Generate a secure pseudo-ZK nullifier to prevent double-spending in the GhostFluid logic
+            // Generate a secure pseudo-ZK nullifier to prevent double-spending in the VeilPay logic
             const nullifierHash = keccak256(toHex(Date.now().toString() + Math.random().toString()));
 
             const hash = await client.writeContract({
                 address: VAULT_CA as `0x${string}`,
-                abi: ghostFluidAbi,
+                abi: veilPayAbi,
                 functionName: 'withdraw',
                 args: [
                     nullifierHash,
@@ -115,7 +115,7 @@ export async function POST(request: Request) {
 
             const hash = await client.writeContract({
                 address: VAULT_CA as `0x${string}`,
-                abi: ghostFluidAbi,
+                abi: veilPayAbi,
                 functionName: 'withdraw',
                 args: [
                     nullifierHash,
